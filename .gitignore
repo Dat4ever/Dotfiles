@@ -1,2 +1,11 @@
+# My themes and icons for GTK apps
 hyprland_nord/icons
 hyprland_nord/themes
+
+# Unnecessary files
+hyprland_nord/config/user-dirs.dirs
+hyprland_nord/config/user-dirs.locale
+hyprland_nord/config/xfce4/
+hyprland_nord/config/vlc/
+
+# Secret files
