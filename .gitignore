@@ -8,6 +8,13 @@ hyprland_nord/config/user-dirs.locale
 hyprland_nord/config/Thunar
 hyprland_nord/config/xfce4/
 hyprland_nord/config/vlc/
+
+# GTK and QT theme apps
+hyprland_nord/config/Kvantum/
+hyprland_nord/config/gtk-3.0/
+hyprland_nord/config/gtk-4.0/
+hyprland_nord/config/qt5ct/
+hyprland_nord/config/qt6ct/
 hyprland_nord/config/xsettingsd/
 
 # Secret files

@@ -19,8 +19,8 @@ setopt hist_reduce_blanks
 autoload -Uz colors && colors
 setopt prompt_subst
 
-# Prompt
-PROMPT="%F{green}%n%f %F{blue}%~%f %# "
+# Enter the folder without writing cd
+setopt AUTO_CD
 
 # Aliases
 alias ll='ls -lah'
@@ -38,8 +38,19 @@ bindkey '^[[3~' delete-char
 autoload -Uz compinit
 compinit
 
-# Editor
+# Neovim as default editor
 export EDITOR=nvim
+
+# Prompt
+git_info() {
+  local branch=$(git symbolic-ref --short HEAD 2>/dev/null)
+  [[ -z $branch ]] && return
+  local dirty=""
+  [[ -n $(git status --porcelain 2>/dev/null) ]] && dirty="*"
+  echo "%F{150}(${branch}${dirty})%f"
+}
+precmd() { print -Pn "\e]0;%~\a" }
+PROMPT='%F{014}%n%f %F{110}%~%f $(git_info) %F{111}›%f '
 
 # Plugins (zplug)
 if [ ! -d ~/.zplug ]; then
