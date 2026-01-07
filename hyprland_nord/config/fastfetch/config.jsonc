@@ -34,7 +34,7 @@
       "type": "gpu",
       "keyColor": "blue",
       "key": "  ├󰘸"
-    },
+    }, 
     {
       "type": "display",
       "keyColor": "blue",
@@ -89,13 +89,8 @@
       "key": "  ╰"
     },
     "break",
-//    {
-//      "type": "DE",
-//      "keyColor": "yellow",
-//      "key": " DE"
-//    },
     {
-      "type": "WM",
+      "type": "WM ",
       "keyColor": "yellow",
       "key": " WM"
     },
@@ -112,7 +107,7 @@
     {
       "type": "Icons",
       "keyColor": "yellow",
-      "key": "  ├"
+      "key": "  ├󱄄"
     },
     {
       "type": "Font",
