@@ -38,4 +38,4 @@ parse_git_bg() {
 }
 
 # Bash prompt
-export PS1="\[$CYN\]\u\[$RS\]\[$YLW\]@\[$RS\]\[$GRN\]\h\[$RS\]\[$BLU\] \w\[$RS\] \$(parse_git_bg) \n\[$CYN\]\\$ \[$RS\]"
+export PS1="\[$BLU\]\u\[$RS\]\[$CYN\]@\[$RS\]\[$GRN\]\h\[$RS\]\[$YLW\] \w\[$RS\] \$(parse_git_bg) \n\[$CYN\]\\$ \[$RS\]"
