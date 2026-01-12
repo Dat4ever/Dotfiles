@@ -1,0 +1,41 @@
+[[ $- != *i* ]] && return
+
+# Colors
+RS="\033[0m"
+RED="\033[0;31m"
+GRN="\033[0;32m"
+YLW="\033[0;33m"
+BLU="\033[0;34m"
+MAG="\033[0;35m"
+CYN="\033[0;36m"
+WHT="\033[0;37m"
+
+# History
+HISTSIZE=5000
+HISTFILESIZE=10000
+
+# aliases
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+# Settings
+bind "set completion-ignore-case on"    # Case-insensitive tab completion
+# up and down arrows to search through history
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
+# Git status
+parse_git_bg() {
+  local branch=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+  if [ -n "$branch" ]; then
+    local status=$(git status --porcelain 2> /dev/null)
+    if [ -n "$status" ]; then
+      echo -e " ${MAG}(git:${branch}*)$RS"
+    else
+      echo -e " ${GRN}(git:${branch})$RS"
+    fi
+  fi
+}
+
+# Bash prompt
+export PS1="\[$CYN\]\u\[$RS\]\[$YLW\]@\[$RS\]\[$GRN\]\h\[$RS\]\[$BLU\] \w\[$RS\] \$(parse_git_bg) \n\[$CYN\]\\$ \[$RS\]"
