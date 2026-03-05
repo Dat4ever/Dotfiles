@@ -7,5 +7,6 @@ allow_markup=true
 term=kitty
 allow_images=true
 hide_scroll=true
+insensitive=true
 prompt=
 font=JetBrainsMono 12
