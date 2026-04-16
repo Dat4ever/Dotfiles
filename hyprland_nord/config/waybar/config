@@ -63,7 +63,7 @@
 
     "custom/power": {
         "format": "",
-        "on-click": "ydotool key 125:1 24:1 24:0 125:0"
+        "on-click": "bash ~/.config/hypr/wofi-logout.sh"
     },
 
     "custom/language": {
