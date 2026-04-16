@@ -17,7 +17,7 @@ HISTFILESIZE=10000
 # aliases
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias update='bash ~/Documents/bashscripts/arch-install-update.bash'
+alias update='bash ~/Documents/Bashscripts/arch-install-update.bash'
 
 # Settings
 bind "set completion-ignore-case on"    # Case-insensitive tab completion
